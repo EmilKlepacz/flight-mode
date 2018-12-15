@@ -65,9 +65,9 @@ class Footer extends React.Component {
         return (
             <MuiThemeProvider theme={theme}>
             <BottomNavigation className={classes.root}>
-                <BottomNavigationAction icon={<FacebookIcon className={classes.iconHover} color="primary" onClick={()=>this.openNewSite(fb_URL)}/>} />
-                <BottomNavigationAction icon={<InstagramIcon className={classes.iconHover} color="primary" onClick={()=>this.openNewSite(insta_URL)} />} />
-                <BottomNavigationAction icon={<MixCloudIcon className={classes.iconHover} color="primary" onClick={()=>this.openNewSite(mixcloud_URL)} />} />
+                <BottomNavigationAction icon={<FacebookIcon className={classes.iconHover} fontSize="small" color="primary" onClick={()=>this.openNewSite(fb_URL)}/>} />
+                <BottomNavigationAction icon={<InstagramIcon className={classes.iconHover} fontSize="small" color="primary" onClick={()=>this.openNewSite(insta_URL)} />} />
+                <BottomNavigationAction icon={<MixCloudIcon className={classes.iconHover} fontSize="small" color="primary" onClick={()=>this.openNewSite(mixcloud_URL)} />} />
             </BottomNavigation>
             </MuiThemeProvider>
         
