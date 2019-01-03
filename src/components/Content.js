@@ -25,7 +25,7 @@ const styles = {
   },
 
   typographyContainer: {
-    marginTop: "20%",
+    marginTop: "30%",
     marginLeft: "5%",
     marginRight: "5%"
   },

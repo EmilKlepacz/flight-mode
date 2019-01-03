@@ -48,9 +48,9 @@ const MixCloudIcon = (props) => (
     </SvgIcon>
   );
 
-const fb_URL = "https://www.facebook.com/";
+const fb_URL = "https://www.facebook.com/flight.mode.961";
 const insta_URL = "https://www.instagram.com/";
-const mixcloud_URL = "https://www.mixcloud.com/";
+const mixcloud_URL = "https://www.mixcloud.com/flightmode_podcast/";
 
 class Footer extends React.Component {
 

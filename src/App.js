@@ -8,7 +8,7 @@ import IframesGroup from "./components/IframesGroup";
 import Footer from "./components/Footer";
 
 
-
+var title = "FLIGHT-MODE: listen - dance - worship satan";
 
 const particlesOpt = {
     "particles": {
@@ -123,6 +123,11 @@ const particlesOpt = {
 };
 
 class App extends Component {
+
+  componentDidMount(){
+    document.title = title;
+  }
+
   render() {
     return (
       <div className="App">
