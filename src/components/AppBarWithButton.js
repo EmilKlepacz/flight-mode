@@ -62,7 +62,7 @@ function ButtonAppBar(props) {
               color="primary"
               className={classes.grow}
             >
-              Fligth-mode
+              Flight-mode
             </Typography>
           </Toolbar>
         </AppBar>
