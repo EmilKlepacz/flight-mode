@@ -16,13 +16,20 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import SvgIcon from '@material-ui/core/SvgIcon';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Grid from '@material-ui/core/Grid';
+import Avatar from '@material-ui/core/Avatar';
 
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
   palette: {
-    primary: { main: "#FFFFFF" }, 
-    secondary: { main: "#11cb5f" }
+    primary: { main: "#FFFFFF" },
+    secondary: { main: "#8cfd09" }
   }
 });
 
@@ -34,7 +41,8 @@ const styles = {
   grow: {
     flexGrow: 1,
     textAlign: "center",
-    fontFamily: "Share Tech Mono"
+    fontFamily: "Share Tech Mono",
+    marginLeft: -48
   },
   menuButton: {
     marginLeft: -12,
@@ -55,13 +63,18 @@ const styles = {
   },
 
   list: {
+    backgroundColor: "#000000",
+  },
+
+  paperInDrawer: {
     backgroundColor: "#000000"
   },
 
-  paperInDrawer:{
-      backgroundColor: "#000000"
+  bigAvatar: {
+    margin: 10,
+    width: 60,
+    height: 60,
   }
-
 };
 
 const RuneIcon_1 = (props) => (
@@ -70,10 +83,11 @@ const RuneIcon_1 = (props) => (
   </SvgIcon>
 );
 
-class AppBarWithButton extends React.Component{
+class AppBarWithButton extends React.Component {
 
   state = {
-    left: false
+    left: false,
+    aboutOpen: false
   };
 
   toggleDrawer = (open) => () => {
@@ -82,18 +96,35 @@ class AppBarWithButton extends React.Component{
     });
   };
 
-  render(){
+  handleClickItem = (index) => () => {
+    switch(index){
+      case 0: {
+        this.setState({ aboutOpen: true });
+        break;
+      }
+      default: {
+        break;
+      }
+    }
+    
+  }
+
+  handleCloseAbout = () => {
+    this.setState({ aboutOpen: false });
+  };
+
+  render() {
     const { classes } = this.props;
 
     const sideList = (
       <div className={classes.sideList}>
         <List className={classes.list}>
-          {['About', 'Chaotic Cult', 'Send us nudes'].map((text) => (
-            <ListItem button key={text}>
-              <ListItemIcon> 
-                <RuneIcon_1 className={classes.iconHover} fontSize="small" color="primary"/>
+          {['About', 'Chaotic Cult', 'Send us nudes'].map((text, index) => (
+            <ListItem button key={text} onClick={this.handleClickItem(index)}>
+              <ListItemIcon>
+                <RuneIcon_1 fontSize="small" color="secondary"/>
               </ListItemIcon>
-              <ListItemText primary={<Typography variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}>{text}</Typography>}/>
+              <ListItemText primary={<Typography variant="h7" style={{color: '#FFFFFF', fontFamily: "Share Tech Mono"}}>{text}</Typography>} />
             </ListItem>
           ))}
         </List>
@@ -101,8 +132,10 @@ class AppBarWithButton extends React.Component{
         <List className={classes.list}>
           {['Other stuff', 'Groove'].map((text) => (
             <ListItem button key={text}>
-              <ListItemIcon> <InboxIcon/> </ListItemIcon>
-              <ListItemText primary={<Typography variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}>{text}</Typography>}/>
+              <ListItemIcon>
+                <RuneIcon_1 fontSize="small" color="secondary" />
+              </ListItemIcon>
+              <ListItemText primary={<Typography variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}>{text}</Typography>} />
             </ListItem>
           ))}
         </List>
@@ -127,27 +160,81 @@ class AppBarWithButton extends React.Component{
                 color="primary"
                 className={classes.grow}
               >
-                Flight-mode
+                flight_mode
               </Typography>
             </Toolbar>
           </AppBar>
 
-        <Drawer classes={{ paper: classes.paperInDrawer }}  open={this.state.left} onClose={this.toggleDrawer(false)}>
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer(false)}
-            onKeyDown={this.toggleDrawer(false)}
-          >
-            {sideList}
-          </div>
-        </Drawer>
+          <Drawer classes={{ paper: classes.paperInDrawer }} open={this.state.left} onClose={this.toggleDrawer(false)}>
+            <div
+              tabIndex={0}
+              role="button"
+              onClick={this.toggleDrawer(false)}
+              onKeyDown={this.toggleDrawer(false)}
+            >
+              {sideList}
+            </div>
+          </Drawer>
+
+        <Dialog
+          fullWidth={true}
+          maxWidth={'sm'}
+          open={this.state.aboutOpen}
+          aria-labelledby="about-dialog-title"
+          onClose={this.handleCloseAbout}
+        >
+          <DialogTitle id="about-dialog-title">About Preachers</DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              <Grid
+              container
+              direction="column"
+              justify="flex"
+              alignItems="flex"
+              spacing={24}
+              >
+                <Grid item xs={12}>
+                  <Grid
+                  container
+                  direction="row"
+                  justify="flex-start"
+                  alignItems="flex-start"
+                  spacing={6}
+                  >
+                  <Grid item xs={2}><Avatar alt="Avatar" src="/static/images/e_avatar.jpg" className={classes.bigAvatar} /></Grid>
+                  <Grid item xs={10}> /Emil : Trvly fascinated with polish and scandinavian black metal 
+                  and also dark electronic from berlin underground scene.  </Grid>
+                  </Grid>
+                </Grid>
+                <Grid item xs={12}>
+                  <Grid
+                  container
+                  direction="row"
+                  justify="flex-start"
+                  alignItems="flex-start"
+                  spacing={6}
+                  >
+                  <Grid item xs={2}><Avatar alt="Avatar" src="/static/images/r_avatar.jpg" className={classes.bigAvatar} /></Grid>
+                  <Grid item xs={10}>Text about radej. Text about radej.
+                  Text about radej. Text about radeej.
+                  Text about radej. Text about radej.
+                  Text about radej. Text about radej.
+                  Text about radej. Text about radej.
+                  Text about radej. Text about radej.
+                  </Grid>
+                 </Grid>
+                </Grid>
+              </Grid>
+              
+            </DialogContentText>
+          </DialogContent>
+        </Dialog>
 
         </div>
       </MuiThemeProvider>
     );
   }
-  
+
 }
 
 
