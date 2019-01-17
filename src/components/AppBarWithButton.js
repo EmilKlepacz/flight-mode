@@ -54,8 +54,25 @@ const styles = {
     marginLeft: "0px",
     marginRight: "0px",
     "&:hover": {
-      background: "rgba(0, 0, 0, 0.7);"
+      background: "rgba(140, 253, 9, 0.15);"
     }
+  },
+
+  aboutDialog:{
+    backgroundColor: "rgba(140, 253, 9, 0.15);",
+  },
+
+  aboutDialogTitle:{
+    backgroundColor: "#000000",
+    fontFamily: "Share Tech Mono"
+  },
+
+  aboutDialogContent: {
+    backgroundColor: "#000000",
+  },
+
+  aboutDialogContextText: {
+    backgroundColor: "#000000",
   },
 
   sideList: {
@@ -72,8 +89,12 @@ const styles = {
 
   bigAvatar: {
     margin: 10,
-    width: 60,
-    height: 60,
+    width: 50,
+    height: 50,
+  },
+
+  typography: {
+    fontFamily: "Share Tech Mono"
   }
 };
 
@@ -97,7 +118,7 @@ class AppBarWithButton extends React.Component {
   };
 
   handleClickItem = (index) => () => {
-    switch(index){
+    switch (index) {
       case 0: {
         this.setState({ aboutOpen: true });
         break;
@@ -106,7 +127,7 @@ class AppBarWithButton extends React.Component {
         break;
       }
     }
-    
+
   }
 
   handleCloseAbout = () => {
@@ -122,9 +143,9 @@ class AppBarWithButton extends React.Component {
           {['About', 'Chaotic Cult', 'Send us nudes'].map((text, index) => (
             <ListItem button key={text} onClick={this.handleClickItem(index)}>
               <ListItemIcon>
-                <RuneIcon_1 fontSize="small" color="secondary"/>
+                <RuneIcon_1 fontSize="small" color="secondary" />
               </ListItemIcon>
-              <ListItemText primary={<Typography variant="h7" style={{color: '#FFFFFF', fontFamily: "Share Tech Mono"}}>{text}</Typography>} />
+              <ListItemText primary={<Typography variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}>{text}</Typography>} />
             </ListItem>
           ))}
         </List>
@@ -176,59 +197,75 @@ class AppBarWithButton extends React.Component {
             </div>
           </Drawer>
 
-        <Dialog
-          fullWidth={true}
-          maxWidth={'sm'}
-          open={this.state.aboutOpen}
-          aria-labelledby="about-dialog-title"
-          onClose={this.handleCloseAbout}
-        >
-          <DialogTitle id="about-dialog-title">About Preachers</DialogTitle>
-          <DialogContent>
-            <DialogContentText>
-              <Grid
-              container
-              direction="column"
-              justify="flex"
-              alignItems="flex"
-              spacing={24}
-              >
-                <Grid item xs={12}>
-                  <Grid
+          <Dialog
+            fullWidth={true}
+            maxWidth={'sm'}
+            open={this.state.aboutOpen}
+            aria-labelledby="about-dialog-title"
+            onClose={this.handleCloseAbout}
+            className={classes.aboutDialog}
+          >
+            <DialogTitle id="about-dialog-title" className={classes.aboutDialogTitle}><Typography align="center" variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}> &#10010; About Preachers &#10010;</Typography></DialogTitle>
+            <DialogContent className={classes.aboutDialogContent}>
+              <DialogContentText className={classes.aboutDialogContextText}>
+                <Grid
                   container
-                  direction="row"
-                  justify="flex-start"
-                  alignItems="flex-start"
-                  spacing={6}
-                  >
-                  <Grid item xs={2}><Avatar alt="Avatar" src="/static/images/e_avatar.jpg" className={classes.bigAvatar} /></Grid>
-                  <Grid item xs={10}> /Emil : Trvly fascinated with polish and scandinavian black metal 
-                  and also dark electronic from berlin underground scene.  </Grid>
+                  direction="column"
+                  justify="flex"
+                  alignItems="flex"
+                  spacing={24}
+                >
+                  <Grid item xs={12}>
+                    <Grid
+                      container
+                      direction="column"
+                      justify="center"
+                      alignItems="center"
+                      spacing={24}
+                    >
+                        <Grid item xs={12}><Avatar alt="Avatar" src="/static/images/e_avatar.jpg" className={classes.bigAvatar} /></Grid>
+                        <Grid item xs={12}>
+                          <Typography
+                          className={classes.typography}
+                          variant="body1"
+                          paragraph="true"
+                          align="justify"
+                          color="primary"
+                          >
+                            /Emil : Trvly fascinated with polish and scandinavian black metal
+                             and also dark electronic from berlin underground scene.
+                          </Typography>
+                        </Grid>
+                    </Grid>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Grid
+                      container
+                      direction="column"
+                      justify="center"
+                      alignItems="center"
+                      spacing={24}
+                    >
+                      <Grid item xs={12}><Avatar alt="Avatar" src="/static/images/r_avatar.jpg" className={classes.bigAvatar} /></Grid>
+                      <Grid item xs={12}>
+                        <Typography
+                            className={classes.typography}
+                            variant="body1"
+                            paragraph="true"
+                            align="justify"
+                            color="primary"
+                            >
+                              /Radej : Trvly fascinated with polish and scandinavian black metal
+                             and also dark electronic from berlin underground scene.
+                        </Typography>
+                      </Grid>
+                    </Grid>
                   </Grid>
                 </Grid>
-                <Grid item xs={12}>
-                  <Grid
-                  container
-                  direction="row"
-                  justify="flex-start"
-                  alignItems="flex-start"
-                  spacing={6}
-                  >
-                  <Grid item xs={2}><Avatar alt="Avatar" src="/static/images/r_avatar.jpg" className={classes.bigAvatar} /></Grid>
-                  <Grid item xs={10}>Text about radej. Text about radej.
-                  Text about radej. Text about radeej.
-                  Text about radej. Text about radej.
-                  Text about radej. Text about radej.
-                  Text about radej. Text about radej.
-                  Text about radej. Text about radej.
-                  </Grid>
-                 </Grid>
-                </Grid>
-              </Grid>
-              
-            </DialogContentText>
-          </DialogContent>
-        </Dialog>
+
+              </DialogContentText>
+            </DialogContent>
+          </Dialog>
 
         </div>
       </MuiThemeProvider>

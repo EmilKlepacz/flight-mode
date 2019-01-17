@@ -48,7 +48,7 @@ function ContentText(props) {
             align="justify"
             color="primary"
           >
-            Flight-mode is a podcast series established by Radoslaw Piechocinski &amp; Emil Klepacz.
+            flight_mode is a podcast series established by Radoslaw Piechocinski &amp; Emil Klepacz.
           </Typography>
           <Typography
             className={classes.typography}
