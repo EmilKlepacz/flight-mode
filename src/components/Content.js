@@ -48,7 +48,9 @@ function ContentText(props) {
             align="justify"
             color="primary"
           >
-            flight_mode is a podcast series established by Radoslaw Piechocinski &amp; Emil Klepacz.
+            flight_mode is a podcast series established by Radoslaw Piechocinski &amp; Emil Klepacz. 
+            We are transmitting sounds and energy from Central Europe : Wroclaw, Poland 
+            Latitude: 51.128284 | Longitude: 16.96373. 
           </Typography>
           <Typography
             className={classes.typography}
@@ -68,7 +70,7 @@ function ContentText(props) {
             color="primary"
           >
             We will be presenting synaesthetic post-radio shows based around different colours, 
-            sharpness of a shape and the crispness so stay tuned and follow!
+            sharpness of a shape and the crispness of sound so stay tuned and follow!
           </Typography>
         </div>
       </div>

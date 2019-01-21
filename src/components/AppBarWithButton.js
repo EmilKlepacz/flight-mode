@@ -23,7 +23,8 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
-import IframesGroup from "./IframesGroup";
+import IframesGroup from "./IframeTop";
+import { BrowserRouter as Router, Route, Link, Prompt } from "react-router-dom";
 
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
@@ -59,11 +60,11 @@ const styles = {
     }
   },
 
-  aboutDialog:{
+  aboutDialog: {
     backgroundColor: "rgba(140, 253, 9, 0.15);",
   },
 
-  aboutDialogTitle:{
+  aboutDialogTitle: {
     backgroundColor: "#000000",
     fontFamily: "Share Tech Mono"
   },
@@ -141,14 +142,45 @@ class AppBarWithButton extends React.Component {
     const sideList = (
       <div className={classes.sideList}>
         <List className={classes.list}>
-          {['About', 'Chaotic Cult', 'Send us nudes'].map((text, index) => (
+          {/* {['About', 'Chaotic Cult', 'Send us nudes'].map((text, index) => (
             <ListItem button key={text} onClick={this.handleClickItem(index)}>
               <ListItemIcon>
                 <RuneIcon_1 fontSize="small" color="secondary" />
               </ListItemIcon>
               <ListItemText primary={<Typography variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}>{text}</Typography>} />
             </ListItem>
-          ))}
+          ))} */}
+          <Link to="/">
+            <ListItem button key={"Home"}>
+              <ListItemIcon>
+                <RuneIcon_1 fontSize="small" color="secondary" />
+              </ListItemIcon>
+              <ListItemText primary={<Typography variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}>{"Home"}</Typography>} />
+            </ListItem>
+          </Link>
+          
+          <ListItem button key={"About"} onClick={this.handleClickItem(0)}>
+            <ListItemIcon>
+              <RuneIcon_1 fontSize="small" color="secondary" />
+            </ListItemIcon>
+            <ListItemText primary={<Typography variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}>{"About"}</Typography>} />
+          </ListItem>
+        
+          <Link to="/all-episodes">
+          <ListItem button key={"All Episodes"}>
+            <ListItemIcon>
+              <RuneIcon_1 fontSize="small" color="secondary" />
+            </ListItemIcon>
+            <ListItemText primary={<Typography variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}>{"All Episodes"}</Typography>} />
+          </ListItem>
+          </Link>
+
+          <ListItem button key={"Chaotic Cult"}>
+            <ListItemIcon>
+              <RuneIcon_1 fontSize="small" color="secondary" />
+            </ListItemIcon>
+            <ListItemText primary={<Typography variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}>{"Chaotic Cult"}</Typography>} />
+          </ListItem>
         </List>
         <Divider />
         <List className={classes.list}>
@@ -224,19 +256,19 @@ class AppBarWithButton extends React.Component {
                       alignItems="center"
                       spacing={24}
                     >
-                        <Grid item xs={12}><Avatar alt="Avatar" src="/static/images/e_avatar.jpg" className={classes.bigAvatar} /></Grid>
-                        <Grid item xs={12}>
-                          <Typography
+                      <Grid item xs={12}><Avatar alt="Avatar" src="/static/images/e_avatar.jpg" className={classes.bigAvatar} /></Grid>
+                      <Grid item xs={12}>
+                        <Typography
                           className={classes.typography}
                           variant="body1"
                           paragraph="true"
                           align="justify"
                           color="primary"
-                          >
-                            /Emil : Trvly fascinated with polish and scandinavian black metal
-                             and also dark electronic from berlin underground scene.
+                        >
+                          /Emil : Trvly fascinated with polish and scandinavian black metal.
+                          Explorer of post-punk and dark electronic from Berlin underground scene.
                           </Typography>
-                        </Grid>
+                      </Grid>
                     </Grid>
                   </Grid>
                   <Grid item xs={12}>
@@ -250,14 +282,14 @@ class AppBarWithButton extends React.Component {
                       <Grid item xs={12}><Avatar alt="Avatar" src="/static/images/r_avatar.jpg" className={classes.bigAvatar} /></Grid>
                       <Grid item xs={12}>
                         <Typography
-                            className={classes.typography}
-                            variant="body1"
-                            paragraph="true"
-                            align="justify"
-                            color="primary"
-                            >
-                              /Radej : Trvly fascinated with polish and scandinavian black metal
-                             and also dark electronic from berlin underground scene.
+                          className={classes.typography}
+                          variant="body1"
+                          paragraph="true"
+                          align="justify"
+                          color="primary"
+                        >
+                          /Radej : Enthusiast of of london jazz and 90s east coast rap music.
+                          Fanatic of polish black metal. Dancing to weird electronic music.
                         </Typography>
                       </Grid>
                     </Grid>
