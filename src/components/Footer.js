@@ -18,7 +18,8 @@ const styles = {
     root: {
         width: "100%",
         background: "rgba(0, 0, 0, 0.1);",
-        backgroundColor: "black"
+        backgroundColor: "black",
+        marginTop: "0px !important"
     },
 
     iconHover: {

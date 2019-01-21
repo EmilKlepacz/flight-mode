@@ -25,7 +25,7 @@ const styles = {
   },
 
   typographyContainer: {
-    marginTop: "30%",
+    marginTop: "150px",
     marginLeft: "5%",
     marginRight: "5%"
   },
@@ -57,11 +57,18 @@ function ContentText(props) {
             align="justify"
             color="primary"
           >
-            Strongly inspired by correlation of underground and mainstream music/art/events we are trying to 
-            showcase the most distingiushed and finest pieces. We refused to repress parts of ourselvs so we are 
-            finally able to express all of these sides in the singular show. Discussing and juggling aesthetics
-            brought us to the point where new modifications as a tool of transgression are equal to classics.
-            
+            Strongly inspired by correlation of underground and mainstream music we are trying to 
+            showcase the most distingiushed and finest pieces.
+          </Typography>
+          <Typography
+            className={classes.typography}
+            variant="body1"
+            paragraph="true"
+            align="justify"
+            color="primary"
+          >
+            We will be presenting synaesthetic post-radio shows based around different colours, 
+            sharpness of a shape and the crispness so stay tuned and follow!
           </Typography>
         </div>
       </div>

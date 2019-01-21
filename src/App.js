@@ -132,13 +132,17 @@ class App extends Component {
     return (
       <div className="App">
       <AppBarWithButton className="App-Bar"/>
+
+      <IframesGroup/>
+      
         <div className="frame-layout__wrapper">
         <Content/>
           <div className="frame-layout__particles-container">
             <Particles className="frame-layout__particles" params={particlesOpt}/>
+            
           </div>
         </div>
-        <IframesGroup/>
+        {/* <IframesGroup/> */}
         <Footer/>
       </div>
     );
