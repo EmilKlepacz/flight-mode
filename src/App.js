@@ -7,7 +7,8 @@ import Content from "./components/Content";
 import IframeTop from "./components/IframeTop";
 import Footer from "./components/Footer";
 import { BrowserRouter, Route, Link  } from "react-router-dom";
-import IframeAll from "./components/IframeAll";
+
+import AllShowsGrid from "./components/AllShowsGrid";
 
 
 var title = "FLIGHT-MODE: listen - dance - worship satan";
@@ -138,13 +139,11 @@ class App extends Component {
           <AppBarWithButton className="App-Bar" />
           <IframeTop />
 
-          <Route path="/all-episodes"  component={IframeAll} />
-
+          
+          <Route path="/all-episodes"  component={AllShowsGrid} />
           <div className="frame-layout__wrapper">
           <Route path="/" exact component={Content} />
           
-
-          {/* <Content /> */}
             <div className="frame-layout__particles-container">
               <Particles className="frame-layout__particles" params={particlesOpt} />
             </div>
