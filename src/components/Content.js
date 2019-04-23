@@ -70,7 +70,7 @@ function ContentText(props) {
             color="primary"
           >
             We will be presenting synaesthetic post-radio shows based around different colours, 
-            sharpness of a shape and the crispness of sound so stay tuned and follow!
+            sharpness of a shape and the crispness of sound, so stay tuned and follow!
           </Typography>
         </div>
       </div>

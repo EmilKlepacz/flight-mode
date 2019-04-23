@@ -41,7 +41,7 @@ const particlesOpt = {
       }
     },
     "opacity": {
-      "value": 0.5,
+      "value": 0,
       "random": false,
       "anim": {
         "enable": false,
@@ -69,7 +69,7 @@ const particlesOpt = {
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 3,
       "direction": "none",
       "random": false,
       "straight": false,
@@ -125,6 +125,7 @@ const particlesOpt = {
 
 };
 
+
 class App extends Component {
 
   componentDidMount() {
@@ -147,10 +148,10 @@ class App extends Component {
             <div className="frame-layout__particles-container">
               <Particles className="frame-layout__particles" params={particlesOpt} />
             </div>
-
+            
           </div>  
-          
           <Footer />
+          
         </div>
       </BrowserRouter>
     );

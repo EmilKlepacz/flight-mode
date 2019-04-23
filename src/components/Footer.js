@@ -19,7 +19,10 @@ const styles = {
         width: "100%",
         background: "rgba(0, 0, 0, 0.1);",
         backgroundColor: "black",
-        marginTop: "0px !important"
+        // marginTop: "0px !important",
+
+        position: "absolute",
+        bottom: -370
     },
 
     iconHover: {
@@ -49,8 +52,8 @@ const MixCloudIcon = (props) => (
     </SvgIcon>
   );
 
-const fb_URL = "https://www.facebook.com/flight.mode.961";
-const insta_URL = "https://www.instagram.com/";
+const fb_URL = "https://www.facebook.com/podcastflightmode/";
+const insta_URL = "https://www.instagram.com/trybsamolotowy_podcast/";
 const mixcloud_URL = "https://www.mixcloud.com/flightmode_podcast/";
 
 class Footer extends React.Component {

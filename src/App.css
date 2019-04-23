@@ -2,6 +2,9 @@
 
 .App {
   display: block;
+
+  position: relative;
+  min-height:100vh;
   /* flex: 1 */
 }
 
@@ -25,6 +28,11 @@ a:-webkit-any-link {
   text-decoration: none !important;
 }
 
+iframe:hover {
+  /* borderColor: 1px solid rgb(255, 255, 255) !important; */
+  border-color: #8cfd09 !important
+}
+
 
 .App-Title{
   color: white;
@@ -41,9 +49,8 @@ a:-webkit-any-link {
 .frame-layout__wrapper{
    box-sizing:border-box;
   width:100%;
-  min-height:100vh;
-  overflow:hidden; 
-
+  /* min-height:100vh; */
+  overflow:hidden;
 }
 
 .frame-layout__particles-container{

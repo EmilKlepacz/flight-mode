@@ -106,6 +106,34 @@ const RuneIcon_1 = (props) => (
   </SvgIcon>
 );
 
+const RuneIcon_2 = (props) => (
+  <SvgIcon {...props}>
+    <path d="M19.1552734,4.8447266c-0.2929688-0.2929688-0.7675781-0.2929688-1.0605469,0L13,9.9394531   L7.9052734,4.8447266c-0.2929688-0.2929688-0.7675781-0.2929688-1.0605469,0s-0.2929688,0.7675781,0,1.0605469L11.9394531,11   l-5.0947266,5.0947266c-0.2929688,0.2929688-0.2929688,0.7675781,0,1.0605469l5.625,5.625   C12.6162109,22.9267578,12.8076172,23,13,23s0.3837891-0.0732422,0.5302734-0.2197266l5.625-5.625   c0.2929688-0.2929688,0.2929688-0.7675781,0-1.0605469L14.0605469,11l5.0947266-5.0947266   C19.4482422,5.6123047,19.4482422,5.1376953,19.1552734,4.8447266z M17.5644531,16.625L13,21.1894531L8.4355469,16.625   L13,12.0605469L17.5644531,16.625z"></path>
+  </SvgIcon>
+);
+
+const RuneIcon_3 = (props) => (
+  <SvgIcon {...props}>
+    <path d="M24.25,1H1.75C1.3359375,1,1,1.3359375,1,1.75S1.3359375,2.5,1.75,2.5h10.5v4.5644531l-5.4052734,5.4052734  c-0.2929688,0.2929688-0.2929688,0.7675781,0,1.0605469L12.25,18.9355469V24.25c0,0.4140625,0.3359375,0.75,0.75,0.75  s0.75-0.3359375,0.75-0.75v-5.3144531l5.4052734-5.4052734c0.2929688-0.2929688,0.2929688-0.7675781,0-1.0605469L13.75,7.0644531  V2.5h10.5C24.6640625,2.5,25,2.1640625,25,1.75S24.6640625,1,24.25,1z M13.75,9.1855469L17.5644531,13L13.75,16.8144531V9.1855469z   M12.25,16.8144531L8.4355469,13L12.25,9.1855469V16.8144531z"></path>
+  </SvgIcon>
+);
+
+const RuneIcon_4 = (props) => (
+  <SvgIcon {...props}>
+    <path d="M24.25,1H1.75C1.3359375,1,1,1.3359375,1,1.75S1.3359375,2.5,1.75,2.5h10.5v6H7.375  c-0.4140625,0-0.75,0.3359375-0.75,0.75S6.9609375,10,7.375,10h4.875v6H7.375c-0.4140625,0-0.75,0.3359375-0.75,0.75  s0.3359375,0.75,0.75,0.75h4.875v6.75c0,0.4140625,0.3359375,0.75,0.75,0.75s0.75-0.3359375,0.75-0.75V17.5h4.875  c0.4140625,0,0.75-0.3359375,0.75-0.75S19.0390625,16,18.625,16H13.75v-6h4.875c0.4140625,0,0.75-0.3359375,0.75-0.75  s-0.3359375-0.75-0.75-0.75H13.75v-6h10.5C24.6640625,2.5,25,2.1640625,25,1.75S24.6640625,1,24.25,1z"></path>
+  </SvgIcon>
+);
+
+const RuneIcon_5 = (props) => (
+  <SvgIcon {...props}>
+    <path d="M24.25,1H1.75C1.3359375,1,1,1.3359375,1,1.75S1.3359375,2.5,1.75,2.5h10.5v8.6894531L7.9052734,6.8447266  c-0.2929688-0.2929688-0.7675781-0.2929688-1.0605469,0s-0.2929688,0.7675781,0,1.0605469L11.9394531,13l-5.0947266,5.0947266  c-0.2929688,0.2929688-0.2929688,0.7675781,0,1.0605469C6.9912109,19.3017578,7.1826172,19.375,7.375,19.375  s0.3837891-0.0732422,0.5302734-0.2197266L12.25,14.8105469V24.25c0,0.4140625,0.3359375,0.75,0.75,0.75s0.75-0.3359375,0.75-0.75  v-9.4394531l4.3447266,4.3447266C18.2412109,19.3017578,18.4326172,19.375,18.625,19.375s0.3837891-0.0732422,0.5302734-0.2197266  c0.2929688-0.2929688,0.2929688-0.7675781,0-1.0605469L14.0605469,13l5.0947266-5.0947266  c0.2929688-0.2929688,0.2929688-0.7675781,0-1.0605469s-0.7675781-0.2929688-1.0605469,0L13.75,11.1894531V2.5h10.5  C24.6640625,2.5,25,2.1640625,25,1.75S24.6640625,1,24.25,1z"></path>
+  </SvgIcon>
+);
+
+
+
+
+
 class AppBarWithButton extends React.Component {
 
   state = {
@@ -161,7 +189,7 @@ class AppBarWithButton extends React.Component {
           
           <ListItem button key={"About"} onClick={this.handleClickItem(0)}>
             <ListItemIcon>
-              <RuneIcon_1 fontSize="small" color="secondary" />
+              <RuneIcon_2 fontSize="small" color="secondary" />
             </ListItemIcon>
             <ListItemText primary={<Typography variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}>{"About"}</Typography>} />
           </ListItem>
@@ -169,29 +197,27 @@ class AppBarWithButton extends React.Component {
           <Link to="/all-episodes">
           <ListItem button key={"All Episodes"}>
             <ListItemIcon>
-              <RuneIcon_1 fontSize="small" color="secondary" />
+              <RuneIcon_3 fontSize="small" color="secondary" />
             </ListItemIcon>
             <ListItemText primary={<Typography variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}>{"All Episodes"}</Typography>} />
           </ListItem>
           </Link>
 
-          <ListItem button key={"Chaotic Cult"}>
+          {/* <ListItem button key={"Chaotic Cult"}>
             <ListItemIcon>
-              <RuneIcon_1 fontSize="small" color="secondary" />
+              <RuneIcon_4 fontSize="small" color="secondary" />
             </ListItemIcon>
             <ListItemText primary={<Typography variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}>{"Chaotic Cult"}</Typography>} />
           </ListItem>
         </List>
         <Divider />
         <List className={classes.list}>
-          {['Other stuff', 'Groove'].map((text) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                <RuneIcon_1 fontSize="small" color="secondary" />
-              </ListItemIcon>
-              <ListItemText primary={<Typography variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}>{text}</Typography>} />
-            </ListItem>
-          ))}
+        <ListItem button key={"Send Us Nudes"}>
+            <ListItemIcon>
+              <RuneIcon_5 fontSize="small" color="secondary" />
+            </ListItemIcon>
+            <ListItemText primary={<Typography variant="h7" style={{ color: '#FFFFFF', fontFamily: "Share Tech Mono" }}>{"Send Us Nudes"}</Typography>} />
+          </ListItem> */}
         </List>
       </div>
     );
@@ -210,7 +236,7 @@ class AppBarWithButton extends React.Component {
                 <MenuIcon />
               </IconButton>
               <Typography
-                variant="h3"
+                variant="h4"
                 color="primary"
                 className={classes.grow}
               >
