@@ -50,8 +50,10 @@ var shows = {
         { "tags": ["HIP-HOP", "TRAP", "GANGSTA RAP", "URABAN", "FRANCE", "DEUTSCH", "GRIME"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2Fflight-mode-1%2F" },
         { "tags": ["BLACK METAL", "SHOEGAZE", "AVANT-GARDE", "POST BM", "DOOM", "GRINDCORE", "DEATH"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F2%2F" },
         { "tags": ["AMBIENT", "COSMIC", "SPACE", "DEEP HOUSE", "ADVENTUROUS", "DARK AMBIENT", "EXPERIMENTAL", "MINIMAL SYNTH"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F3%2F" },
-        { "tags": ["AFRICAN", "ETNO", "AFROBEAT", "WORLD MUSIC", "AFROFUTURISM", "SOUTH AFRICAN HOUSE"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F4%2F" }
-
+        { "tags": ["AFRICAN", "ETNO", "AFROBEAT", "WORLD MUSIC", "AFROFUTURISM", "SOUTH AFRICAN HOUSE"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F4%2F" },
+        { "tags": ["AFROFUTURISM", "NU JAZZ", "JAZZBIENT", "SPIRITUAL JAZZ", "ASTRAL JAZZ", "WORLD", "FUSION"], "src": "https://www.mixcloud.com/widget/iframe/?&feed=%2Fflightmode_podcast%2F5%2F" },
+        { "tags": ["EBM", "NEW WAVE", "POST-PUNK", "ALTERNATIVE", "INDUSTRIAL", "ELECTRONIC", "TECHNO"], "src": "https://www.mixcloud.com/widget/iframe/?&feed=%2Fflightmode_podcast%2F6%2F" }
+        
     ]
 }
 
