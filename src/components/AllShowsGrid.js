@@ -52,7 +52,8 @@ var shows = {
         { "tags": ["AMBIENT", "COSMIC", "SPACE", "DEEP HOUSE", "ADVENTUROUS", "DARK AMBIENT", "EXPERIMENTAL", "MINIMAL SYNTH"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F3%2F" },
         { "tags": ["AFRICAN", "ETNO", "AFROBEAT", "WORLD MUSIC", "AFROFUTURISM", "SOUTH AFRICAN HOUSE"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F4%2F" },
         { "tags": ["AFROFUTURISM", "NU JAZZ", "JAZZBIENT", "SPIRITUAL JAZZ", "ASTRAL JAZZ", "WORLD", "FUSION"], "src": "https://www.mixcloud.com/widget/iframe/?&feed=%2Fflightmode_podcast%2F5%2F" },
-        { "tags": ["EBM", "NEW WAVE", "POST-PUNK", "ALTERNATIVE", "INDUSTRIAL", "ELECTRONIC", "TECHNO"], "src": "https://www.mixcloud.com/widget/iframe/?&feed=%2Fflightmode_podcast%2F6%2F" }
+        { "tags": ["EBM", "NEW WAVE", "POST-PUNK", "ALTERNATIVE", "INDUSTRIAL", "ELECTRONIC", "TECHNO"], "src": "https://www.mixcloud.com/widget/iframe/?&feed=%2Fflightmode_podcast%2F6%2F" },
+        { "tags": ["JAPAN", "EXPERIMENTAL", "ENVIRONMENTAL", "DOWNTEMPO", "MINIMAL", "FREE JAZZ", "IMPROVISATION"], "src": "https://www.mixcloud.com/widget/iframe/?&feed=%2Fflightmode_podcast%2F7%2F" }
         
     ]
 }
