@@ -56,7 +56,8 @@ var shows = {
         { "tags": ["JAPAN", "EXPERIMENTAL", "ENVIRONMENTAL", "DOWNTEMPO", "MINIMAL", "FREE JAZZ", "IMPROVISATION"], "src": "https://www.mixcloud.com/widget/iframe/?&feed=%2Fflightmode_podcast%2F7%2F" },
         { "tags": ["CHAOTIC CULT", "INDUSTRIAL", "POST-PUNK", "ELECTRONIC", "DARK TECHNO"], "src": "https://www.mixcloud.com/widget/iframe/?&feed=%2Fflightmode_podcast%2F8%2F" },
         { "tags": ["STONER", "SLUDGE", "DEATH", "OCCULT", "DOOM"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F9%2F" },
-        { "tags": ["TRAP", "RAP", "HIP-HOP", "DEUTSCHRAP", "FRANCE"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F10%2F" }
+        { "tags": ["TRAP", "RAP", "HIP-HOP", "DEUTSCHRAP", "FRANCE"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F10%2F" },
+        { "tags": ["NEOFOLK", "RITUAL", "AMBIENT", "DARK FOLK", "SKALDIC", "NORDIC"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F11%2F" },
         
     ]
 }
