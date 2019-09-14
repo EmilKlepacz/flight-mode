@@ -58,6 +58,8 @@ var shows = {
         { "tags": ["STONER", "SLUDGE", "DEATH", "OCCULT", "DOOM"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F9%2F" },
         { "tags": ["TRAP", "RAP", "HIP-HOP", "DEUTSCHRAP", "FRANCE"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F10%2F" },
         { "tags": ["NEOFOLK", "RITUAL", "AMBIENT", "DARK FOLK", "SKALDIC", "NORDIC"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F11%2F" },
+        { "tags": ["FOLK", "ALTERNATIVE", "INDIE", "COUNTRY", "ACOUSTIC"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F12%2F" },
+        { "tags": ["BLACK METAL", "GROOVE METAL", "BLACKENED DEATH METAL", "NU METAL"], "src": "https://www.mixcloud.com/widget/iframe/?feed=%2Fflightmode_podcast%2F13%2F" },
         
     ]
 }
